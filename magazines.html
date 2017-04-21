@@ -1,0 +1,66 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar navbaren">
+				<div class="navbar-inner">
+  <div class="left"><a href="#" data-panel="left" class="link icon-only open-panel"> <img src="img/menu.png"></a></div>
+  <div class="center sliding"><a href="home_news.html" ><img class="logo" src="img/LongLogo.png"></a></div>
+  
+   
+  <div class="right theme-white" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="back link"> <img src="img/BackArrowEn.png"></a>
+            </div>
+              </div>
+			</div>
+
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="magazines" class="page">
+     <!-- <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+          <div class="searchbar-input">
+              <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+                  </div><a href="#" class="searchbar-cancel">Cancel</a>
+      </form>
+-->      <div class="searchbar-overlay"></div>
+      <!-- Scrollable page content-->
+    <div class="page-content infinite-scroll pull-to-refresh-content" style="background-color:#ffffff;">
+        <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+        </div>   
+    
+               
+   <div class="content-block searchbar-not-found">
+        <div class="content-block-inner">Nothing found</div>
+    </div>
+    	    <!-- Div for Result -->
+    	    <div class="content-block-title" >Magazines</div>
+				<div id="magazines-content" style="margin-top:20px;"></div>
+
+ <!-- Template7 Template -->
+				<script id="magazines-template" type="text/template">
+					<div class="list-block media-list list-block-search searchbar-found">
+						<ul>
+						{{#each posts}}
+							<li>
+								<a href="http://monthlymagazine.com/cms/upload/magazine/{{pdf}}" class="item-link item-content external" >
+							        <div class="item-media" style="margin:0 auto ;width:300px"><img src="http://monthlymagazine.com/cms/upload/magazine/{{image}}">
+							        
+							        </div>							      </a>
+						      </li>
+						  {{/each}}
+						</ul>
+						
+					</div>
+				  </script>
+<div class="infinite-scroll-preloader">
+    	<div class="preloader"></div>
+       <input type="hidden" id="magazines_limit_start"/>
+			<input type="hidden" id="magazines_limit_end"/>
+       
+  		</div>
+       </div>
+       
+  </div>
+</div>
+		

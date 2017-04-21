@@ -1,0 +1,54 @@
+﻿<div class="navbar">
+  <div class="navbar-inner">
+  <div class="left"><a href="#" class="back link"><img src="img/backarrow.png"></a></div>
+    <div class="center sliding"><a href="home_news1.html"><img class="logo" src="img/LongLogo.png"></a></div>
+  <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <img src="img/magnifier.png"></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <img src="img/menu.png"></a>
+            </div>
+  </div>
+</div>
+
+ <div class="pages navbar-through">
+	<div data-page="search" class="page" > 
+
+		  <!-- Scrollable page content-->
+    <div class="page-content" style="background-color:#d9d9d9;">
+        <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+                <input type="search" onkeyup="searchnews()" id="searc" placeholder="Search" onclick=""><a href="#" class="searchbar-clear"></a>
+                    </div><a href="#" class="searchbar-cancel">Cancel</a>
+        </form>
+          <!-- Div for Result -->
+        <div id="content-wrap1"></div>
+
+ <!-- Template7 Template -->
+        <script id="search-template" type="text/template">
+            <div class="list-block media-list list-block-search searchbar-found">
+            <ul>
+            {{#each posts}}
+            <li>
+            <a href="news-details.html?id={{id}}" class="item-link item-content" >
+            <div class="item-media"><img src="http://monthlymagazine.com/cms/upload/articles/{{image}}" width="165" height="120px">
+<!--            <span class="articlecategory"><mark>{{cat}}</mark></span>-->
+            </div>
+            <div class="item-inner">
+            <div class="item-title-row theme-blue">
+            <div class="item-title">{{name}}</div>
+            </div>
+            <div class="item-subtitle">{{publishing_date}} </div>
+            
+            </div>
+            </a>
+						      </li>
+                              {{/each}}
+                              </ul>
+                              
+                              </div>
+            </script>
+       </div>
+  </div>
+	</div>
+ </div>

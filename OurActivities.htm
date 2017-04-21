@@ -1,0 +1,51 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="ouractivities" class="page">
+     <!-- <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+          <div class="searchbar-input">
+              <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+                  </div><a href="#" class="searchbar-cancel">Cancel</a>
+      </form>
+-->      <div class="searchbar-overlay"></div>
+      <!-- Scrollable page content-->
+    <div class="page-content" >
+           
+    
+    <style>
+  .demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+               <div class="events">
+<h1>Our Activities</h1>
+<div id="ouractivities-content"> </div>
+<script id="ouractivities-template" type="text/template">
+						{{#each this}}
+							<div class="card demo-card-header-pic" >
+							  <div style="background-image:url({{PicturePath}});background-repeat: no-repeat;background-size: contain;height:66vw !important" valign="bottom" class="card-header color-white no-border"></div>
+							  <div class="card-content">
+							    <div class="card-content-inner">
+							     <h1 style="text-align:center">{{Title}}</h1>
+							      <p>{{Summary}}</p>
+							    </div>
+							  </div>
+							 </div>						  
+						{{/each}}
+ </script>
+
+</div>
+ 
+				       
+				       
+				       
+				       </div>
+       
+  </div>
+</div>
+		

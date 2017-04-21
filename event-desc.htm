@@ -1,0 +1,73 @@
+
+
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="event-desc" class="page">
+        <div class="searchbar-overlay"></div>
+        <div class="page-content" >
+            
+            
+            
+            <div class="activities">
+                <div class="swiper-container swiper-slow swiper-3" data-swiper-autoplay="2000">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
+                    <div class="swiper-wrapper">
+                      
+                        
+                       
+                    </div>
+                </div>
+                <div id="event-desc-content"></div>
+                
+                
+                <!-- Template7 Template -->
+                <script id="event-desc-template" type="text/template">
+                    
+                    <h1>{{Title}}</h1>
+                    
+                    
+                    <div class="yellow-area">
+                    
+                    <span class="eventdescdate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{EventDate}}</span>
+                    <span class="eventdesclocation"><i class="fa fa-map-marker" aria-hidden="true"></i> {{Destination}}<br>
+                    
+                    </div>
+                    <div class="eventdescription">
+                    {{Description}}
+                    <br>
+                    <p style="font-weight:bold">Must Have</p>
+                    {{MustHave}}
+                    
+                    <p style="font-weight:bold">Gathering Location</p>
+                    {{GatheringLocation}}
+                    </div>
+                    
+                    
+                    <div class="event-desc-footer">
+                    
+                    
+                    <div class="eventcost">
+                    {{Cost}} L.L
+                    </div>
+                    
+                    <div class="CostDetails">
+                    <p style="font-weight:bold">Including</p>
+                    {{CostDetails}}
+                    </div>
+                    
+                    <div id="join" class="reservation" ><a  href="" onclick="logincheck({{Id}})">Join Event Now</a></div>
+                    
+                    </div>
+                    </script>
+            </div>
+            <!-- Div for Result -->
+            
+            <!-- Template7 Template -->
+        </div>
+        
+    </div>
+</div>
+

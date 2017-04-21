@@ -1,0 +1,57 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left theme-white"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="left sliding"><a href="home_news1.html"><img class="logo" src="img/logo.jpg"></a></div>
+
+   
+    <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <i class="fa fa-search" style="font-size: 19px;"></i></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size: 19px;"></i></a>
+            </div>
+  </div>
+</div>
+
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="commercial-clinic" class="page">
+  
+      <!-- Scrollable page content-->
+    <div class="page-content" style="background-color:#ffffff;">
+    <div class="content-block-title" style="background-color: #d9d9d9;margin: 0;padding: 9px;">COMMERCIAL CLINIC </div>
+    <div style="text-align:center"><img style=" margin: 10px;width: 88vw;" src="https://www.shawbrook.co.uk/html-images/logo.jpg"></div>
+		<div id="commercial-clinic-content"></div>
+	
+ <!-- Template7 Template -->
+				<script id="commercial-clinic-template" type="text/template">
+						
+        <div class="content-block">
+        <p style="color: #143a5f;text-decoration:underline;font-size:5vw">Most Recent Questions</p>
+       	{{#each posts}}
+	<div style="color: #333333;font-weight:bold;font-size:4vw"><i class="fa fa-question-circle fa-lg"></i>{{question}}</div>
+	<!--<div style="color: #183b61;font-size:4vw;font-style:italic; margin: 10px 0;">{{name}},{{position}}</div>-->
+	<div style="color: #454c52;font-size:4vw;"><i class="fa fa-check-circle fa-lg" style="float: left;"></i>{{answer}}</div>
+ <hr>
+	{{/each}}
+	
+             
+     </div>
+	   
+			  </script>
+		  
+       </div>
+       <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#173a62">
+      <a href="#" class="link icon-only" style="color:white;border-right:1px white solid "><i class="fa fa-user"></i>Panel Of Experts</a>
+      <a href="cm-ask-question.html" class="link icon-only" style="color:white"><i class="fa fa-envelope"></i>Ask a question</a>
+    </div>
+  </div>
+  
+  </div>
+  
+</div>
+		

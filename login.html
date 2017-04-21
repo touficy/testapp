@@ -1,0 +1,60 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar"  style="display:none">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"><img src="img/backarrow.png"></a></div>
+        <div class="center sliding"><a href="home_news1.html"><img class="logo" src="img/LongLogo.png"></a></div>
+        <div class="right theme-#A5A6A8 searchicon" >
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <img src="img/magnifier.png"></a>
+        </div>
+        <div class="right theme-#A5A6A8 navicon" >
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <img src="img/menu.png"></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="pages" >
+    <!-- Page, data-page contains page name-->
+    <div data-page="login" class="page page2" style="background:white">
+        <div id="logo" style="padding-top:100px;">
+            <div  style="text-align:center;color:#A5A6A8;font-size: 3em;">Sign In</div>
+        </div>
+        <div class="Login" style="padding-bottom:45px;">
+            <form action="/" id="loginform">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="fa fa-user"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">Username</div>
+                                    <div class="item-input">
+                                        <input placeholder="Username" id="username" name="username" type="text" value=""><!--sum000-->
+                                            </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="fa fa-lock"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">Password</div>
+                                    <div class="item-input">
+                                        <input placeholder="Password" type="password" id="password" name="password" value=""><!--qwerty-->
+                                            </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div align="center" >  <br>  <br>
+                    <a href="#" onclick="loginsubmit();"  class="button button-fill button-big color-yellow">Login</a>
+                    
+                    <br> <a href="forget password.html"  style="   color: #A5A6A8;">Forgot your password?</a>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>

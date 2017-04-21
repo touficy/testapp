@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css"></link>
+    <!-- <link rel="stylesheet" href="css/framework7.material.min.css"> -->
+    <!-- Path to your custom app styles-->
+
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Changa:400" rel="stylesheet">
+    <link rel="stylesheet" href="css/fullcalendar.css">
+    <link rel="stylesheet" href="css/fullcalendar.print.css" media="print">
+</head>
+<body >
+
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<!-- Right panel with cover effect-->
+<div class="panel panel-left panel-cover menuen">
+    <div class="list-block accordion-list dynamicmenu">
+        <ul class="menu-content" id="menu-content">
+
+
+
+
+        </ul>
+
+
+
+
+        <div class="login" id="login"><a  class="close-panel" href="login.html"><img src="img/person.png" onclick="mainView.router.loadPage('login.html')"><span>Log in</span></a></div>
+        <div class="myprofile" id="myprofile"><a onclick="getmyprofiledetails()" class="close-panel" href="myprofile.html"><img src="img/person.png"><span>My Profile</span></a><br><span class="loggedin" style="font-size:14px">Logged In as <span id="loggedinas"> </span></span></div>
+    </div>
+
+</div>
+<!-- Views-->
+<div class="views">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar navbaren">
+            <div class="navbar-inner">
+                <div class="left "><a href="#" data-panel="left" class="link icon-only open-panel"> <i class="fa fa-bars white" style="font-size:32px"></i></a></div>
+                <div class="center sliding"><a href="Home.htm" ><img class="logo" src="img/newlogo.png"></a></div>
+
+
+                <div class="right theme-white searchicon" >
+                    <!-- Right link contains only icon - additional "icon-only" class-->
+                    <a href="#" class="link icon-only open-search" id="headerlogin"> <img width="32px" onclick="mainView.router.loadPage('login.html')" src="img/PersonOnBlack.png"></a>
+                    <a href="myprofile.html" class="link icon-only open-search" id="headermyprofile" onclick="getmyprofiledetails()"> <img width="32px" src="img/PersonOnBlack.png"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index" class="page no-swipeback">
+                <!-- Scrollable page content-->
+
+            </div>
+        </div>
+        <!-- Bottom Toolbar-->
+    </div>
+</div>
+
+      <script type="text/javascript" src="cordova.js"></script>
+      <script src="js/toast.js"></script>
+<script type="text/javascript" src="js/SocialSharing.js"></script>
+<script type="text/javascript" src="js/Calendar.js"></script>
+<script src="js/jquery.ui.touch.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min"></script>
+<script src='js/moment.min.js'></script>
+<script src='js/jquery.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+
+app.initialize();
+
+
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/my-app.js">
+            
+            var myApp = new Framework7(); 
+            
+            var mySwiper = myApp.swiper('.swiper-container', {
+                                        pagination:'.swiper-pagination'
+                                        });
+            </script>
+
+
+</body>
+</html>

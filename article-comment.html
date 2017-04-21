@@ -1,0 +1,81 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+  <div class="left"><a href="#" class="back link"><img src="img/backarrow.png"></a></div>
+    <div class="center sliding"><a href="home_news1.html"><img class="logo" src="img/LongLogo.png"></a></div>
+  <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <img src="img/magnifier.png"></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <img src="img/menu.png"></a>
+            </div>
+  </div>
+</div>
+
+
+<div class="login-screen">
+      <!-- Default view-page layout -->
+      <div class="view">
+        <div data-page="news-comment" class="page">
+          <!-- page-content has additional login-screen content -->
+          <div class="page-content login-screen-content">
+          <div class="content-block-title">Make a comment</div>
+            
+            <!-- Login form -->
+            <form>
+           <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+            <input type="text" id="comment-name" placeholder="Your name">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+            <input type="email" id="comment-email" placeholder="E-mail">
+          </div>
+        </div>
+      </div>
+    </li>
+   <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+            <input type="tel" id="comment-phone" placeholder="Phone">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+          <textarea name="question" id="comment-question"  placeholder="comment"></textarea>
+          <input type="hidden" id="article-id" value="">
+
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>                            <div class="list-block">
+                <ul>
+                  <li>
+                  
+                    <a href="#" onclick="submitcommentform();"  class="button active color-blue">Submit</a>
+                  </li>
+                </ul>
+              <!--<div class="list-block-labe">Some text with login information.</div>-->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>  

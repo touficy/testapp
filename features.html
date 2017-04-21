@@ -1,0 +1,62 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left theme-white"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="left sliding"><a href="home_news1.html"><img class="logo" src="img/logo.jpg"></a></div>
+
+   
+    <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <i class="fa fa-search" style="font-size: 19px;"></i></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size: 19px;"></i></a>
+            </div>
+  </div>
+</div>
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="features" class="page">
+  
+      <!-- Scrollable page content-->
+    <div class="page-content infinite-scroll" style="background-color:#d9d9d9;">
+    <div class="content-block-title">Features</div>
+
+    	    <!-- Div for Result -->
+				<div id="features-content"></div>
+
+ <!-- Template7 Template -->
+				<script id="features-template" type="text/template">
+					<div class="list-block media-list">
+						<ul>
+						{{#each posts}}
+							<li>
+								<a href="news-details.html?id={{id}}" class="item-link item-content" >
+							        <div class="item-media"><img src="http://bridgingandcommercial.co.uk/cms/upload/image/{{thumb}}" width="80"></div>
+							        <div class="item-inner">
+							          <div class="item-title-row theme-blue">
+							            <div class="item-title">{{title}}</div>
+							          </div>
+							          <div class="item-subtitle">{{publish_date}} <i class="fa fa-chevron-right newsarrow"></i></div>
+							          <div class="item-text">{{brief}}...</div>
+							        </div>
+							      </a>
+						      </li>
+						  {{/each}}
+						</ul>
+					</div>
+				  </script>
+				  <div class="infinite-scroll-preloader">
+			    	<div class="preloader"></div>
+			       		<input type="hidden" id="feature_news_limit_start"/>
+						<input type="hidden" id="feature_news_limit_end"/>
+       
+  					</div>
+       </div>
+  </div>
+</div>
+		

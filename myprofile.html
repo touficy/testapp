@@ -1,0 +1,143 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+
+
+<div class="pages" >
+	<!-- Page, data-page contains page name-->
+	<div data-page="myprofile" class="page page2" style="background:white">
+        <div style="overflow-y:scroll; height:inherit">
+          
+		<div id="logo" style="padding-top:100px;">
+			<div  style="text-align:center;color:#A5A6A8;font-size: 3em;">My Profile</div>
+		</div>
+        <div class="content-block">
+            <!-- Buttons row as tabs controller -->
+            <div class="buttons-row">
+                <!-- Link to 1st tab, active -->
+                <a href="#tab1" class="tab-link active button">Personal Information</a>
+                <!-- Link to 2nd tab -->
+                <a href="#tab2" onclick="gethikinghistory()" class="tab-link button">Trip History</a>
+            
+            </div>
+        </div>
+          <div class="tabs">
+              <div id="tab1" class="tab active">
+                  <div class="content-block">
+		<div class="Login" style="padding-bottom:45px;">
+			<form action="/" id="loginform">
+				<div class="list-block">
+
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Name</div>
+									<div class="item-input"><input placeholder="name" id="name" name="name" type="text" value=""></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Blood Type</div>
+									<div class="item-input"><input placeholder="BloodType" id="BloodType" name="BloodType" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Nationality</div>
+									<div class="item-input"><input placeholder="Nationality" id="Nationality" name="Nationality" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Profession</div>
+									<div class="item-input"><input placeholder="Profession" id="Profession" name="Profession" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Date Of Birth</div>
+									<div class="item-input"><input placeholder="DateOfBirth" id="DateOfBirth" name="DateOfBirth" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">MobileNo</div>
+									<div class="item-input"><input placeholder="MobileNo" id="MobileNo" name="MobileNo" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label"># Free Trips</div>
+									<div class="item-input"><input placeholder="NumberOfFreeTrips" id="NumberOfFreeTrips" name="NumberOfFreeTrips" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Current Points</div>
+									<div class="item-input"><input placeholder="CurrentPoints" id="CurrentPoints" name="CurrentPoints" type="text"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Username</div>
+									<div class="item-input"><input placeholder="Username" id="pusername" name="username" type="text" ></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">Password</div>
+									<div class="item-input"><input placeholder="Password" type="password" id="ppassword" name="password"></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+				<div align="center" >  <br>  <br>
+                    <div class="row">
+                         <div class="col-50">
+					<a href="#" onclick="updateprofile();" style="width:auto" class="button button-fill button-big color-yellow">Update Profile</a>
+                    </div>
+                         
+                             <div class="col-50">
+                                 <a href="#" onclick="Logout();" style="width:auto" class="button button-fill button-big color-yellow">Log out</a>
+                             </div>
+                               </div>
+
+				</div>
+			</form>
+		</div>
+        </div>
+                  </div>
+              <div id="tab2" class="tab" onclick="">
+                  <div class="content-block">
+                      <div class="list-block">
+                          <ul id="Hhistory">
+                              
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+        </div>
+
+	</div>
+</div>
+</div>

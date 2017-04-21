@@ -1,0 +1,85 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+  <div class="left"><a href="#" class="back link"><img src="img/backarrow.png"></a></div>
+    <div class="center sliding"><a href="home_news1.html"><img class="logo" src="img/LongLogo.png"></a></div>
+  <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <img src="img/magnifier.png"></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <img src="img/menu.png"></a>
+            </div>
+  </div>
+</div>
+
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="sectionpreferences" class="page">
+  
+      <!-- Scrollable page content-->
+    <div class="page-content" style="background-color:#ffffff;">
+    <div class="content-block-title" style="">Language Preferences </div>
+    
+    
+  <div class="content-block-title" style="padding-top: 45px;font-size:20px;">Language</div>
+  <div class="list-block" style="padding-top: 0px">
+  <ul>
+    <!-- Single radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="sett_radio" id="sett_radio1" value="0"  >
+        <div class="item-inner white">
+          <div class="item-title"> English</div>
+        </div>
+      </label>
+    </li>
+    <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="sett_radio" id="sett_radio2" value="1" >
+        <div class="item-inner white">
+          <div class="item-title">Arabic</div>
+        </div>
+      </label>
+     <li>
+     </li>
+     </ul>
+     </div>
+
+    <div class="content-block-title" style=" font-size:4vw">select your preferred sectors below</div>
+    
+    
+
+		<div class="content-block" style=" margin: 10px 0;">
+                <div class="row">
+                   <div class="col-100" style="text-align:center">
+                  	<a href="#"  onclick="myprofilesubmit();" class="button active color-blue">Submit</a></div>
+                  </div>
+              </div>
+
+	<!--<div class="content-block" style="padding:0; margin-top: 10px;">
+
+		  <table cellpadding="0" cellspacing="0">
+		  <tr>
+		  <td class="col-50 myprofileblocks" style="background-color:#d7d7d7;color:#173a62; box-shadow:7px 7px 10px 0 #888888 inset"><a href="#">BRIDGING FINANCE</a></td>
+		  <td class="col-50 myprofileblocks" style="background-color:#c2c2c2;color:#173a62;box-shadow:7px 7px 10px 0 #888888 inset"><a href="#">DEVELOPMENT FINANCE</a></td>
+		  </tr>
+		    <tr>
+		  <td class="col-50 myprofileblocks" style="background-color:#959595;color:#173a62;box-shadow:7px 7px 10px 0 #888888 inset"><a href="#">COMMERCIAL FINANCE</a></td>
+		  <td class="col-50 myprofileblocks" style="background-color:#7d7d7d;color:#173a62;box-shadow:7px 7px 10px 0 #888888 inset"><a href="#">PROPERTY NEWS</a></td>
+		  </tr>
+  			<tr>
+		  <td class="col-50 myprofileblocks" style="background-color:#555555;color:white;box-shadow:7px 7px 10px 0 #888888 inset"><a href="#">ALTERNATIVE FINANCE</a></td>
+		  <td class="col-50 myprofileblocks" style="background-color:#252525;color:white;box-shadow:7px 7px 10px 0 #888888 inset"><a href="#">BANKING NEWS</a></td>
+		  </tr>
+
+		  </table>
+		  </div>-->
+       </div>
+         
+  </div>
+  
+</div>
+		

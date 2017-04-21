@@ -1,0 +1,78 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left theme-white"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="left sliding"><a href="home_news1.html"><img style=" margin-left: -33px;" class="logo" src="img/logo.jpg"></a></div>
+
+   
+    <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <i class="fa fa-search" style="font-size: 19px;"></i></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size: 19px;"></i></a>
+            </div>
+  </div>
+</div>
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="poll" class="page">
+  
+      <!-- Scrollable page content-->
+    <div class="page-content" >
+    <div class="content-block-title" style="background-color: #d9d9d9;margin: 0;padding: 9px;">POLL</div>
+
+    	    <!-- Div for Result -->
+				<div id="poll-content"></div>
+
+ <!-- Template7 Template -->
+				<script id="poll-template" type="text/template">
+					
+					<div class="list-block">
+					<div id="pollquestionplacement"></div>
+					<form id="poll-form" class="list-block">
+						<ul class="polllisting">
+						{{#each posts}}
+						
+							<li>
+							 <label class="label-radio item-content no-fastclick">
+							  <input type="radio" name="opt" id="opt{{@index}}" value="{{id}}">
+							  <div class="item-media">
+						          <i class="icon icon-form-radio"></i>
+						        </div>
+						        <div class="item-inner">
+						          <div class="item-title">{{answer}}</div>
+						        </div>
+						     </label>
+						<input type="hidden" id="pollquestion" value="{{question}}">
+						<input type="hidden" id="pollquestionId" value="{{poll_question_id}}">
+							    
+						      </li>
+						  {{/each}}
+						</ul>
+						</form>
+			<div class="content-block" style="margin:25px 0">
+                <div class="row">
+                  <div class="col-50">
+                  	<div class="col-100" style="text-align:center">
+                  	
+                  	<a href="#" onClick="ValidateForm()" id="btn" class="button button-round active" style="background:#173a62;border:0">Vote</a></div>
+                  	</div>
+                  
+                  
+                  <div class="col-50">
+                  	<div class="col-100" style="text-align:center">
+                  	<input type="hidden" name="pollID" id="pollID" placeholder="pollID" >
+	                  	<a href="pollresults.html" class="button button-round active" onClick="Results();" style="background:#173a62;border:0">Results</a>
+	                 </div>
+                  </div>
+                </div>
+              </div>
+
+					</div>
+				  </script>
+       </div>
+  </div>
+</div>
+		

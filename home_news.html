@@ -1,0 +1,113 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar navbaren">
+				<div class="navbar-inner">
+  <div class="left "><a href="#" data-panel="left" class="link icon-only open-panel"> <img src="img/menu.png"></a></div>
+  <div class="center sliding"><a href="home_news.html" ><img class="logo" src="img/LongLogo.png"></a></div>
+  
+   <div class="right theme-white langicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="" class="link icon-only open-search" onclick="englishToarabic();"> <img src="img/translate.png"></a>
+            </div>
+
+  <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <img src="img/magnifier.png"></a>
+            </div>
+              </div>
+			</div>
+
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="home_news" class="page">
+     <!-- <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+          <div class="searchbar-input">
+              <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+                  </div><a href="#" class="searchbar-cancel">Cancel</a>
+      </form>
+-->      <div class="searchbar-overlay"></div>
+      <!-- Scrollable page content-->
+    <div class="page-content infinite-scroll pull-to-refresh-content" style="background-color:#ffffff;">
+        <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+        </div>   
+    <div class="content-block-title"><img src="img/BreakingNewsEn.png"></div>
+    
+    <div class="breakingNews" id="bn1">
+     <marquee behavior="scroll" direction="left">
+    <table style="width:4000px" ><tr class="newsmarquee-content" id="newsmarquee-content">
+       <script id="newsmarquee-template" type="text/template">
+										
+						{{#each posts}}
+							
+												    <td><a class="item-link item-content" href="news-details.html?id={{id}}">{{name}}</a></td>
+						  {{/each}}
+						
+					
+				  </script>
+
+
+        	
+               </tr></table></marquee>
+           </div>
+           
+           <div id="bannernews-content">
+           
+           <script id="bannernews-template" type="text/template">
+										
+						{{#each posts}}
+						<a href="news-details.html?id={{id}}" class="item-link item-content" >
+
+							 <div id="firstnewsimage"><img class="img-responsive" src="http://monthlymagazine.com/cms/upload/articles/{{image}}"></div>
+           					 <div id="firstnewstitle"><mark>{{name}}</mark></div>
+           					  <div id="firstnewsdate">{{publishing_date}}</div>
+           					  </a>
+
+						{{/each}}
+						
+					
+				  </script>
+
+          
+           </div>
+           <div class="content-block searchbar-not-found">
+        <div class="content-block-inner">Nothing found</div>
+    </div>
+    	    <!-- Div for Result -->
+				<div id="content-wrap2"></div>
+
+ <!-- Template7 Template -->
+				<script id="homenews-template" type="text/template">
+					<div class="list-block media-list list-block-search searchbar-found">
+						<ul>
+						{{#each posts}}
+							<li>
+								<a href="news-details.html?id={{id}}" class="item-link item-content" >
+							        <div class="item-media"><img src="http://monthlymagazine.com/cms/upload/articles/{{thumb}}" width="165" height="120px">
+							        <span class="articlecategory"><mark>{{cat}}</mark></span>
+							        </div>
+							        <div class="item-inner">
+							          <div class="item-title-row theme-blue">
+							            <div class="item-title">{{name}}</div>
+							          </div>
+							          <div class="item-subtitle">{{publishing_date}} </div>
+							        
+							            </div>
+							      </a>
+						      </li>
+						  {{/each}}
+						</ul>
+						
+					</div>
+				  </script>
+<div class="infinite-scroll-preloader">
+    	<div class="preloader"></div>
+       <input type="hidden" id="home_news_limit_start"/>
+			<input type="hidden" id="home_news_limit_end"/>
+       
+  		</div>
+       </div>
+       
+  </div>
+</div>
+		

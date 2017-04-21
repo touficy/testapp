@@ -1,0 +1,48 @@
+﻿<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left theme-white"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="left sliding"><a href="home_news1.html"><img class="logo" src="img/logo.jpg"></a></div>
+
+   
+    <div class="right theme-white searchicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-search" onclick="searchResults();"> <i class="fa fa-search" style="font-size: 19px;"></i></a>
+            </div>
+            <div class="right theme-white navicon" >
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size: 19px;"></i></a>
+            </div>
+  </div>
+</div>
+
+
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="doctors" class="page">
+  
+      <!-- Scrollable page content-->
+    <div class="page-content" style="background-color:#ffffff;">
+    <div class="content-block-title" style="background-color: #d9d9d9;margin: 0;padding: 9px;">DOCTORS</div>
+		<div id="doctors-content"></div>
+	
+ <!-- Template7 Template -->
+				<script id="doctors-template" type="text/template">
+						
+        <div class="content-block">
+       	{{#each posts}}
+	<div style="text-align:center"><img src="http://www.bridgingandcommercial.co.uk/cms/upload/image/{{thumb}}"></div>
+	<div style="color: #333333;font-size:4vw;font-weight:bold; margin: 2px 0;text-align:center">{{name}}</div>
+	<div style="color: #153b62;font-size:4vw;text-align:center">{{position}}</div>
+ <hr>
+	{{/each}}
+	
+             
+     </div>
+	   
+			  </script>
+		  
+       </div>
+         </div>
+  
+</div>
+		
